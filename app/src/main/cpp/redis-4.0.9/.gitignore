@@ -12,7 +12,7 @@ redis-server
 doc-tools
 release
 misc/*
-src/release.h
+src/release.h1
 appendonly.aof
 SHORT_TERM_TODO
 release.h

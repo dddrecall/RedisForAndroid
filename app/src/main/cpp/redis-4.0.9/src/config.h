@@ -108,11 +108,11 @@
 #endif
 #endif
 
-#ifdef HAVE_SYNC_FILE_RANGE
-#define rdb_fsync_range(fd,off,size) sync_file_range(fd,off,size,SYNC_FILE_RANGE_WAIT_BEFORE|SYNC_FILE_RANGE_WRITE)
-#else
+//#ifdef HAVE_SYNC_FILE_RANGE
+//#define rdb_fsync_range(fd,off,size) sync_file_range(fd,off,size,SYNC_FILE_RANGE_WAIT_BEFORE|SYNC_FILE_RANGE_WRITE)
+//#else
 #define rdb_fsync_range(fd,off,size) fsync(fd)
-#endif
+//#endif
 
 /* Check if we can use setproctitle().
  * BSD systems have support for it, we provide an implementation for

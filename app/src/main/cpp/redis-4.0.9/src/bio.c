@@ -154,10 +154,12 @@ void *bioProcessBackgroundJobs(void *arg) {
         return NULL;
     }
 
+    # ifndef __ANDROID__
     /* Make the thread killable at any time, so that bioKillThreads()
      * can work reliably. */
     pthread_setcancelstate(PTHREAD_CANCEL_ENABLE, NULL);
     pthread_setcanceltype(PTHREAD_CANCEL_ASYNCHRONOUS, NULL);
+    # endif
 
     pthread_mutex_lock(&bio_mutex[type]);
     /* Block SIGALRM so we are sure that only the main thread will
