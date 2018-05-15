@@ -1,6 +1,6 @@
 # RedisForAndroid
 Redis For Android<br/>
-本项目建设的初衷是快速构建出Android平台的二进制可执行文件<br/>
+本项目建设的初衷是快速构建出Android平台的Redis相关二进制可执行文件<br/>
 
 Redis版本：redis-4.0.9<br/>
 二进制文件：redis-server、redis-cli、redis-benchmark、dict-benchmark<br/>
